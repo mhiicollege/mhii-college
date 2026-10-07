@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mhiicollege.github.io/mhii-college/sitemap.xml
