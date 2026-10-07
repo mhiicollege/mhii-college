@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="MHII College offers 12-month online Diploma programmes in Qur’anic Studies, Hadith, Sharia, Arabic, Islamic Studies and Education, taught through WhatsApp and Telegram.">
 <script>document.documentElement.classList.add("js")</script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 <title>MHII College – Manaratul Huda International Islamic College</title>
 <style>
 :root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
@@ -275,21 +276,21 @@ footer a{color:#f0d48a}
 <p class="note">Applications open 1–31 December 2026. You may complete this form now to pre-register. Your application is processed in the order received when the window opens.</p>
 <div class="card" id="gw" style="margin-top:12px">
 <h3>Step 1: Create your applicant account or sign in</h3>
-<p class="note">Your account keeps your application safe on this device so you can stop and continue later. Online accounts that work on any device will come with the student portal.</p>
+<p class="note">Your account saves your application online, so you can stop and continue later on any phone.</p>
 <div class="btns" style="margin:12px 0"><button type="button" class="btn dk" id="tc" style="border:0;cursor:pointer">Create account</button><button type="button" class="btn alt" id="ts" style="color:var(--deep);border-color:var(--deep);background:none;cursor:pointer">Sign in</button></div>
 <div id="fc">
 <label for="cn"><strong>Full name</strong></label><input id="cn" autocomplete="name">
-<label for="cc"><strong>Email or phone number</strong></label><input id="cc" autocomplete="username">
+<label for="cc"><strong>Email address</strong></label><input id="cc" type="email" autocomplete="username">
 <label for="cp"><strong>Password</strong> (at least 8 characters)</label><input id="cp" type="password" autocomplete="new-password">
 <label for="cq"><strong>Confirm password</strong></label><input id="cq" type="password" autocomplete="new-password">
 <label class="ck"><input id="ck" type="checkbox"> I have read the Privacy policy and agree to create this account.</label>
 <div class="btns"><button type="button" class="btn dk" id="cb" style="border:0;cursor:pointer">Create account and continue</button></div>
 </div>
 <div id="fs" style="display:none">
-<label for="sc2"><strong>Email or phone number</strong></label><input id="sc2" autocomplete="username">
+<label for="sc2"><strong>Email address</strong></label><input id="sc2" type="email" autocomplete="username">
 <label for="sp"><strong>Password</strong></label><input id="sp" type="password" autocomplete="current-password">
 <div class="btns"><button type="button" class="btn dk" id="sb" style="border:0;cursor:pointer">Sign in and continue</button></div>
-<p style="font:.88rem system-ui,sans-serif;color:var(--mute)">Forgot your password? Create a new account on this device.</p>
+<p style="font:.88rem system-ui,sans-serif;color:var(--mute)">Forgot your password? Message The Admin Office on WhatsApp to reset it.</p>
 </div>
 <p id="gm" role="alert" style="color:#b3261e;font:.92rem system-ui,sans-serif;margin:10px 0 0;min-height:1.2em"></p>
 </div>
@@ -390,7 +391,7 @@ footer a{color:#f0d48a}
 <p><strong>This website.</strong> It does not use cookies or tracking. The application form opens WhatsApp with a message you can edit before sending. WhatsApp and Telegram handle messages under their own privacy rules.</p>
 <p><strong>Certificates.</strong> To let employers verify a certificate, we keep its issue number, verification code, your name, programme and result.</p>
 <p><strong>Your choices.</strong> You may ask The Admin Office to correct your details. You may ask us to delete other information, except records we need to keep so that your certificate can be verified.</p>
-<p><strong>Security.</strong> Passwords are stored securely, private files are open only to authorised users, and important actions are recorded.</p></details>
+<p><strong>Security.</strong> Passwords are stored securely, private files are open only to authorised users, and important actions are recorded. Accounts and applications are stored with our database provider, Supabase.</p></details>
 <details><summary>Terms of use</summary>
 <ol><li>This website gives information about MHII College. We try to keep it accurate, and dates and fees may change. Confirm important details with The Admin Office.</li>
 <li>Official notices come only from The Admin Office through the email address and WhatsApp number on this website.</li>
@@ -529,45 +530,56 @@ $("rc").textContent=code;
 $("sw").href="https://wa.me/2349032382891?text="+encodeURIComponent(m);
 $("se").href="mailto:mhiicollege@gmail.com?subject="+encodeURIComponent("MHII application "+code)+"&body="+encodeURIComponent(m);
 $("sc").onclick=function(){try{navigator.clipboard.writeText(m).then(function(){$("cm").textContent="Message copied."},function(){$("cm").textContent="Could not copy. Use the WhatsApp or email button."})}catch(e){$("cm").textContent="Could not copy. Use the WhatsApp or email button."}};
-markSent(code);$("wz").style.display="none";$("wr").style.display="block";$("wr").scrollIntoView({behavior:"smooth",block:"start"})};
+markSent(code,m);$("wz").style.display="none";$("wr").style.display="block";$("wr").scrollIntoView({behavior:"smooth",block:"start"})};
 function reveal(root){var io=window.IntersectionObserver&&new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);if(e.target.matches(".stats p")){var b=e.target.querySelector("[data-n]");if(b)count(b)}}})},{threshold:.12});
 root.querySelectorAll(".card,.steps li,.wk li,details,h2,.track,.note,.stats p,.btns,figure").forEach(function(el){if(el.classList.contains("rv"))return;if(el.closest(".hero"))return;el.classList.add("rv");var sib=Array.prototype.indexOf.call(el.parentNode.children,el);el.style.setProperty("--d",Math.min(sib,8)*.07+"s");if(io)io.observe(el);else el.classList.add("in")})}
 function count(b){var n=+b.getAttribute("data-n"),t=0;var id=setInterval(function(){t++;b.textContent=Math.round(n*t/20);if(t>=20){clearInterval(id);b.textContent=n}},45)}
 reveal(document);
 var cl=$("cl"),lgi=document.querySelector(".lg img");if(cl&&lgi)cl.src=lgi.src;
 var L=$("lb");L.onclick=function(){var ar=document.documentElement.lang!="ar";document.querySelectorAll("[data-ar]").forEach(function(e){if(!e.hasAttribute("data-en"))e.setAttribute("data-en",e.textContent);e.textContent=ar?e.getAttribute("data-ar"):e.getAttribute("data-en")});document.documentElement.lang=ar?"ar":"en";document.documentElement.dir=ar?"rtl":"ltr";L.textContent=ar?"English":"العربية"};
-var AK="mhii_accts",cu=null,FLD=["fn","dob","gn","ph","em","co","ct","ql","ex","hp","wp","dv","wa","tg","rs"];
-function ld(){try{return JSON.parse(localStorage.getItem(AK)||"{}")}catch(e){return{}}}
-function sv(o){try{localStorage.setItem(AK,JSON.stringify(o));return true}catch(e){return false}}
-function hx(salt,pw){return crypto.subtle.digest("SHA-256",new TextEncoder().encode(salt+":"+pw)).then(function(b){return Array.prototype.map.call(new Uint8Array(b),function(x){return("0"+x.toString(16)).slice(-2)}).join("")})}
+var SB=null;try{SB=window.supabase.createClient("https://scvvmqrkrcqhnhvmoacj.supabase.co","sb_publishable_6cCWtiMbaRNy7CLMgffdcw_iWPbZbeZ")}catch(e){}
+var cu=null,rowId=null,insP=null,FLD=["fn","dob","gn","ph","em","co","ct","ql","ex","hp","wp","dv","wa","tg","rs"];
 function gerr(m){$("gm").textContent=m;return false}
-function key(c){return c.toLowerCase().replace(/\s/g,"")}
-function validContact(c){return/^\S+@\S+\.\S+$/.test(c)||/^[+0-9()-]{10,16}$/.test(c.replace(/\s/g,""))}
+function nm(u){return(u.user_metadata&&u.user_metadata.full_name)||u.email}
+function readDraft(){var d={step:cur};FLD.forEach(function(i){var e=$(i);d[i]=e.type=="checkbox"?e.checked:e.value});return d}
+function ensureRow(){if(rowId)return Promise.resolve(rowId);
+if(!insP)insP=SB.from("applications").insert({user_id:cu.id,data:{}}).select().single().then(function(r){insP=null;if(r.error||!r.data)throw(r.error||new Error("save"));rowId=r.data.id;return rowId},function(e){insP=null;throw e});return insP}
+function saveDraft(){if(!cu||!SB)return;ensureRow().then(function(id){return SB.from("applications").update({data:readDraft(),updated_at:new Date().toISOString()}).eq("id",id)}).catch(function(){})}
+function markSent(code,m){if(!cu||!SB)return;ensureRow().then(function(id){var d=readDraft();d.message=m;return SB.from("applications").update({status:"submitted",request_code:code,data:d,updated_at:new Date().toISOString()}).eq("id",id)}).then(function(r){if(r&&r.error)throw r.error;rowId=null}).catch(function(){$("cm").textContent="Your application could not be saved online. You can still send it with the buttons above."})}
+function setLinks(code,m){$("rc").textContent=code;$("sw").href="https://wa.me/2349032382891?text="+encodeURIComponent(m);$("se").href="mailto:mhiicollege@gmail.com?subject="+encodeURIComponent("MHII application "+code)+"&body="+encodeURIComponent(m)}
+function showSent(row){var m=(row.data&&row.data.message)||"MHII application "+row.request_code;setLinks(row.request_code,m);$("wz").style.display="none";$("wr").style.display="block";$("cm").textContent="This application was already submitted. To change anything, contact The Admin Office.";$("wr").scrollIntoView({behavior:"smooth",block:"start"})}
+function enter(user){cu=user;rowId=null;$("gw").style.display="none";$("who").textContent="Signed in as "+nm(user);
+$("wz").style.display="block";$("wr").style.display="none";$("gm").textContent="";
+SB.from("applications").select("*").eq("user_id",user.id).order("updated_at",{ascending:false}).limit(1).then(function(r){var row=r.data&&r.data[0];
+if(row&&row.status=="submitted"){showSent(row);return}
+var d=row&&row.data;if(row)rowId=row.id;
+if(d&&d.fn!==undefined){FLD.forEach(function(i){var e=$(i);if(d[i]===undefined)return;if(e.type=="checkbox")e.checked=!!d[i];else e.value=d[i]})}
+else{$("fn").value=(user.user_metadata&&user.user_metadata.full_name)||"";$("em").value=user.email||""}
+show(d&&d.step?d.step:1);$("wz").scrollIntoView({behavior:"smooth",block:"start"})})}
 $("tc").onclick=function(){$("fc").style.display="block";$("fs").style.display="none";$("gm").textContent=""};
 $("ts").onclick=function(){$("fc").style.display="none";$("fs").style.display="block";$("gm").textContent=""};
-function saveDraft(){if(!cu)return;var A=ld();if(!A[cu])return;var d={step:cur};FLD.forEach(function(i){var e=$(i);d[i]=e.type=="checkbox"?e.checked:e.value});A[cu].draft=d;sv(A)}
-function enter(k){cu=k;var A=ld(),a=A[k];$("gw").style.display="none";$("wz").style.display="block";$("wr").style.display="none";
-$("who").textContent="Signed in as "+a.name+(a.sent?" · Last application sent: "+a.sent:"");
-var d=a.draft;if(d){FLD.forEach(function(i){var e=$(i);if(d[i]===undefined)return;if(e.type=="checkbox")e.checked=!!d[i];else e.value=d[i]})}
-else{$("fn").value=a.name;if(a.contact.indexOf("@")>-1)$("em").value=a.contact;else $("ph").value=a.contact}
-show(d&&d.step?d.step:1);$("wz").scrollIntoView({behavior:"smooth",block:"start"})}
 $("cb").onclick=function(){
-if(!window.crypto||!crypto.subtle)return gerr("This browser cannot create an account securely. Try Chrome on your phone.");
+if(!SB)return gerr("The account service did not load. Check your internet and reload the page.");
 var n=$("cn").value.trim(),c=$("cc").value.trim(),p=$("cp").value;
 if(n.split(/\s+/).length<2)return gerr("Enter your full name, first and last name.");
-if(!validContact(c))return gerr("Enter a valid email address or phone number.");
+if(!/^\S+@\S+\.\S+$/.test(c))return gerr("Enter a valid email address.");
 if(p.length<8)return gerr("Your password must be at least 8 characters.");
 if(p!==$("cq").value)return gerr("The two passwords do not match.");
 if(!$("ck").checked)return gerr("Tick the box to agree before creating your account.");
-var k=key(c),A=ld();if(A[k])return gerr("An account with this email or phone already exists on this device. Tap Sign in.");
-var salt=Array.prototype.map.call(crypto.getRandomValues(new Uint8Array(8)),function(x){return("0"+x.toString(16)).slice(-2)}).join("");
-hx(salt,p).then(function(h){A[k]={name:n,contact:c,salt:salt,hash:h};if(!sv(A))return gerr("Your browser blocked saving. Turn off private mode and try again.");$("cp").value="";$("cq").value="";enter(k)})};
+$("cb").disabled=true;$("gm").textContent="Creating your account…";
+SB.auth.signUp({email:c,password:p,options:{data:{full_name:n}}}).then(function(r){$("cb").disabled=false;
+if(r.error){gerr(/already|registered|exists/i.test(r.error.message)?"An account with this email already exists. Tap Sign in.":r.error.message);return}
+if(r.data&&r.data.session){$("cp").value="";$("cq").value="";enter(r.data.user)}
+else gerr("Your account was created but needs email confirmation, which is not available yet. Please contact The Admin Office.")},function(){$("cb").disabled=false;gerr("Could not reach the account service. Check your internet and try again.")})};
 $("sb").onclick=function(){
-if(!window.crypto||!crypto.subtle)return gerr("This browser cannot sign in securely. Try Chrome on your phone.");
-var k=key($("sc2").value.trim()),A=ld(),a=A[k];if(!a)return gerr("No account found for this email or phone on this device.");
-hx(a.salt,$("sp").value).then(function(h){if(h!==a.hash)return gerr("Wrong password. Try again.");$("sp").value="";enter(k)})};
-$("so").onclick=function(){saveDraft();cu=null;FLD.forEach(function(i){var e=$(i);if(e.type=="checkbox")e.checked=false;else e.value=""});["d1","d2","d3"].forEach(function(i){$(i).checked=false});$("wz").style.display="none";$("wr").style.display="none";$("gw").style.display="block";$("gm").textContent="";show(1)};
-function markSent(c){if(!cu)return;var A=ld();if(A[cu]){A[cu].sent=c;delete A[cu].draft;sv(A)}}
+if(!SB)return gerr("The account service did not load. Check your internet and reload the page.");
+var c=$("sc2").value.trim(),p=$("sp").value;if(!c||!p)return gerr("Enter your email and password.");
+$("sb").disabled=true;$("gm").textContent="Signing in…";
+SB.auth.signInWithPassword({email:c,password:p}).then(function(r){$("sb").disabled=false;
+if(r.error){gerr("Wrong email or password.");return}
+$("sp").value="";enter(r.data.user)},function(){$("sb").disabled=false;gerr("Could not reach the account service. Check your internet and try again.")})};
+$("so").onclick=function(){var done=function(){cu=null;rowId=null;FLD.forEach(function(i){var e=$(i);if(e.type=="checkbox")e.checked=false;else e.value=""});["d1","d2","d3"].forEach(function(i){$(i).checked=false});$("wz").style.display="none";$("wr").style.display="none";$("gw").style.display="block";$("gm").textContent="";show(1)};if(SB)SB.auth.signOut().then(done,done);else done()};
+if(SB){SB.auth.getSession().then(function(r){if(r.data&&r.data.session)enter(r.data.session.user)},function(){})}
 $("vb").onclick=function(){$("vr").textContent=$("vc").value.trim()?"Online verification will be switched on once the college database is connected. For now, email mhiicollege@gmail.com with the code.":"Enter the verification code first."};
 </script>
 <script>
