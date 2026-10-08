@@ -22,6 +22,7 @@
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "name": "MHII College", "alternateName": ["Manaratul Huda International Islamic College", "Monaratu-L-Huda International Islamic College", "كلية منارة الهدى العالمية الإسلامية"], "url": "https://mhiicollege.github.io/mhii-college/"}, {"@type": "EducationalOrganization", "name": "Manaratul Huda International Islamic College", "alternateName": "MHII College", "url": "https://mhiicollege.github.io/mhii-college/", "logo": "https://mhiicollege.github.io/mhii-college/icon-192.png", "email": "mhiicollege@gmail.com", "address": {"@type": "PostalAddress", "addressLocality": "Osogbo", "addressRegion": "Osun State", "addressCountry": "NG"}}]}</script>
 <title>MHII College | Online Islamic Diploma Programmes</title>
 <style>
@@ -144,7 +145,7 @@ footer a{color:#f0d48a}
 </head>
 <body>
 <header><div class="bar"><a class="logo" href="#home">MHII College</a><button id="lb" type="button" style="background:none;border:1px solid #fff;color:#fff;padding:6px 12px;border-radius:6px;font:600 .9rem system-ui,sans-serif;cursor:pointer;margin-inline-start:auto;margin-inline-end:8px">العربية</button><button id="mb" aria-expanded="false" aria-controls="nv" data-ar="القائمة">Menu</button></div>
-<nav id="nv" aria-label="Main"><a href="#home" data-ar="الرئيسية">Home</a><a href="#about" data-ar="عن الكلية">About</a><a href="#academics" data-ar="البرامج">Programmes</a><a href="#admissions" data-ar="القبول">Admissions</a><a href="#students" data-ar="الطلاب">Students</a><a href="#verify" data-ar="التحقق">Verify</a><a href="#contact" data-ar="اتصل بنا">Contact</a></nav></header>
+<nav id="nv" aria-label="Main"><a href="#home" data-ar="الرئيسية">Home</a><a href="#about" data-ar="عن الكلية">About</a><a href="#academics" data-ar="البرامج">Programmes</a><a href="#learn" data-ar="تعلّم">Learn</a><a href="#admissions" data-ar="القبول">Admissions</a><a href="#students" data-ar="الطلاب">Students</a><a href="#verify" data-ar="التحقق">Verify</a><a href="#contact" data-ar="اتصل بنا">Contact</a></nav></header>
 <div id="sn" class="sn" style="display:none"></div>
 
 <div class="hero pg" id="home"><div>
@@ -185,6 +186,7 @@ footer a{color:#f0d48a}
 <section class="pg" id="share" style="padding-bottom:0"><h2>Share MHII College</h2>
 <p class="lead">Know someone who wants to study Islamic knowledge? Send them the link.</p>
 <div class="card"><div class="btns" style="margin-top:0"><a class="btn dk" id="sh-wa" href="#" rel="noopener">Share on WhatsApp</a><a class="btn dk" id="sh-tg" href="#" rel="noopener">Share on Telegram</a><button type="button" class="btn alt" id="sh-cp" style="color:var(--deep);border-color:var(--deep);background:none;cursor:pointer">Copy invitation</button><button type="button" class="btn alt" id="sh-nt" style="display:none;color:var(--deep);border-color:var(--deep);background:none;cursor:pointer">More options</button></div>
+<p style="font:.9rem system-ui,sans-serif;color:var(--mute);margin:12px 0 0">Tip: in Chrome, tap the three dots, then <strong>Add to Home screen</strong>, to keep MHII College on your phone like an app.</p>
 <p id="sh-m" role="status" style="font:.9rem system-ui,sans-serif;color:var(--mute);margin:10px 0 0;min-height:1.2em"></p></div></section>
 
 <section id="about" class="pg"><h2 data-ar="عن كلية MHII">About MHII College</h2>
@@ -259,8 +261,16 @@ footer a{color:#f0d48a}
 <div class="card sc"><table><tr><th>CGPA</th><th>Class</th></tr><tr><td>4.50–5.00</td><td>Distinction</td></tr><tr><td>3.50–4.49</td><td>Upper Credit</td></tr><tr><td>2.50–3.49</td><td>Lower Credit</td></tr><tr><td>1.50–2.49</td><td>Pass</td></tr><tr><td>Below 1.50</td><td>Fail</td></tr></table></div>
 </div></div></section>
 
+<section class="pg" id="learn"><h2>Learn a little every day</h2>
+<p class="lead">A new Arabic word and a short reminder each day. Come back tomorrow for the next ones.</p>
+<div class="grid">
+<div class="card"><h3>Arabic word of the day</h3><p id="wd-ar" lang="ar" dir="rtl" style="font-size:2.4rem;margin:6px 0;color:var(--deep);line-height:1.3"></p><p id="wd-tr" style="margin:0;font:600 1.05rem Georgia,serif"></p><p id="wd-en" style="margin:2px 0 10px;color:var(--mute)"></p><a class="btn dk" id="wd-sh" href="#" rel="noopener">Share this word</a></div>
+<div class="card"><h3>Daily reminder</h3><p id="dr-t" style="margin:6px 0;font-size:1.1rem"></p><p id="dr-s" style="margin:0 0 10px;color:var(--mute);font:.9rem system-ui,sans-serif"></p><a class="btn dk" id="dr-sh" href="#" rel="noopener">Share this reminder</a></div>
+</div>
+<p class="note" style="margin-top:12px">Reminders are short paraphrased summaries with their sources. Please check the wording and context with your teacher.</p></section>
+
 <section id="lesson" class="pg"><h2 data-ar="جرّب درسًا مجانيًا">Try a free lesson</h2>
-<p class="lead">A sample from QUR 101, Introduction to Qur’anic Studies. Read it, then test yourself.</p>
+<p class="lead">Four short samples from our Diplomas. Read each one, then test yourself.</p>
 <div class="card">
 <h3>Lesson 1: What is the Qur’an?</h3>
 <p><strong>By the end of this lesson you will be able to:</strong></p>
@@ -282,6 +292,16 @@ footer a{color:#f0d48a}
 <details><summary>3. How many surahs are in the Qur’an?</summary><p>114.</p></details>
 <details><summary>4. Under which Companion was the Qur’an first gathered into one volume?</summary><p>Abu Bakr.</p></details>
 <p style="margin-bottom:0"><strong>Next in QUR 101:</strong> the sciences of the Qur’an and why we study them.</p>
+</div><div class="card" style="margin-top:14px"><h3>Lesson 2: Arabic letters and sounds</h3><p style="margin:0 0 6px;color:var(--mute);font:.88rem system-ui,sans-serif">From ARB 201, Arabic for Non-Native Speakers</p><ul class="p"><li>Arabic has 28 letters and is written and read from right to left.</li><li>Most letters join to the letter after them, and many change shape at the start, middle or end of a word. A few letters do not join to the letter after them.</li><li>Short vowels are small marks above or below a letter. <em>Fatha</em> gives an “a” sound, <em>kasra</em> an “i” sound and <em>damma</em> a “u” sound. <em>Sukun</em> marks a letter with no vowel.</li><li>Practise: <span lang="ar">بَ</span> is “ba”, <span lang="ar">بِ</span> is “bi” and <span lang="ar">بُ</span> is “bu”.</li></ul><h3 style="margin-top:14px">Key terms</h3><ul class="p"><li><span lang="ar">حرف</span> (<em>harf</em>): a letter</li><li><span lang="ar">حركة</span> (<em>harakah</em>): a vowel mark</li><li><span lang="ar">كلمة</span> (<em>kalimah</em>): a word</li></ul><h3 style="margin-top:14px">Check yourself</h3><p style="color:var(--mute);font-size:.92rem;margin-top:0">Think first, then tap the question.</p><details><summary>1. In which direction is Arabic written?</summary><p>From right to left.</p></details><details><summary>2. How many letters does the Arabic alphabet have?</summary><p>28.</p></details><details><summary>3. Which mark gives the short “a” sound?</summary><p>The fatha.</p></details></div><div class="card" style="margin-top:14px"><h3>Lesson 3: What is Tajwid?</h3><p style="margin:0 0 6px;color:var(--mute);font:.88rem system-ui,sans-serif">From QUR 201, Tajwid and Qira’at</p><ul class="p"><li>In language, <em>tajwid</em> means to make something excellent. As a science, it means reciting every letter of the Qur’an from its proper point of articulation, with its qualities and rules.</li><li>Scholars teach that we should avoid clear mistakes in recitation, and that learning the finer rules makes our recitation more beautiful and accurate.</li><li>In the Diploma you will study the points of articulation, noon sakinah and tanwin, meem sakinah, the rules of madd, stopping and starting, and common mistakes.</li></ul><h3 style="margin-top:14px">Key terms</h3><ul class="p"><li><span lang="ar">مخرج</span> (<em>makhraj</em>): the point from which a letter is pronounced</li><li><span lang="ar">صفة</span> (<em>sifah</em>): a quality of a letter</li><li><span lang="ar">مد</span> (<em>madd</em>): lengthening a sound</li><li><span lang="ar">وقف</span> (<em>waqf</em>): stopping during recitation</li></ul><h3 style="margin-top:14px">Check yourself</h3><p style="color:var(--mute);font-size:.92rem;margin-top:0">Think first, then tap the question.</p><details><summary>1. What is a makhraj?</summary><p>The point of articulation from which a letter is pronounced.</p></details><details><summary>2. What does madd mean?</summary><p>Lengthening a sound in recitation.</p></details><details><summary>3. What does waqf mean?</summary><p>Stopping during recitation.</p></details></div><div class="card" style="margin-top:14px"><h3>Lesson 4: What is Hadith?</h3><p style="margin:0 0 6px;color:var(--mute);font:.88rem system-ui,sans-serif">From HAD 101, Hadith and Sunnah</p><ul class="p"><li>A hadith is a report of what Prophet Muhammad ﷺ said, did or approved, or a description of his appearance and character. The Sunnah is his way, and the two are closely linked.</li><li>Every hadith has two parts: the chain of narrators (<em>isnad</em>) and the text (<em>matn</em>).</li><li>Scholars studied the honesty and memory of each narrator, so that authentic reports could be told apart from weak ones.</li><li>The two most authentic collections are Sahih al-Bukhari and Sahih Muslim. The Sunan of Abu Dawud, al-Tirmidhi, al-Nasa’i and Ibn Majah complete the six major books.</li></ul><h3 style="margin-top:14px">Key terms</h3><ul class="p"><li><span lang="ar">إسناد</span> (<em>isnad</em>): the chain of narrators</li><li><span lang="ar">متن</span> (<em>matn</em>): the text of the hadith</li><li><span lang="ar">راوي</span> (<em>rawi</em>): a narrator</li><li><span lang="ar">صحيح</span> (<em>sahih</em>): authentic</li></ul><h3 style="margin-top:14px">Check yourself</h3><p style="color:var(--mute);font-size:.92rem;margin-top:0">Think first, then tap the question.</p><details><summary>1. What is the chain of narrators called?</summary><p>The isnad.</p></details><details><summary>2. What is the matn?</summary><p>The text of the hadith.</p></details><details><summary>3. Which two collections are the most authentic?</summary><p>Sahih al-Bukhari and Sahih Muslim.</p></details></div></section>
+
+<section class="pg alt-bg" id="finder" style="max-width:none"><div style="max-width:964px;margin:auto"><h2>Which Diploma suits me?</h2>
+<p class="lead">Answer two quick questions and we will suggest a Diploma.</p>
+<div class="card" id="fq" aria-live="polite"></div></div></section>
+
+<section class="pg" id="downloads"><h2>Free downloads</h2>
+<div class="grid">
+<a class="card tile" href="MHII-Study-Planner.pdf"><b>Weekly study planner</b><span>Print it and plan your study week (PDF)</span></a>
+<a class="card tile" href="MHII-Admission-Checklist.pdf"><b>Admission checklist</b><span>Requirements, documents and steps (PDF)</span></a>
 </div></section>
 
 <section id="admissions" class="pg"><h2 data-ar="القبول">Admissions</h2>
@@ -403,6 +423,15 @@ footer a{color:#f0d48a}
 <div class="card"><h3>Diploma applications open</h3><p>1–31 December 2026.</p></div>
 <div class="card"><h3>Session begins</h3><p>Proposed for 8 March 2027.</p></div>
 </div><p class="lead" style="margin-top:14px">Official notices are shared by The Admin Office on WhatsApp.</p></section>
+
+<section class="pg alt-bg" id="community" style="max-width:none"><div style="max-width:964px;margin:auto"><h2>Community and events</h2>
+<div class="grid">
+<div class="card"><h3>Announcements</h3><ul class="p"><li>Diploma applications open 1–31 December 2026.</li><li>Pre-registration is open now. Create an account and complete the form.</li><li>Classes are proposed to begin on 8 March 2027.</li></ul></div>
+<div class="card"><h3>Live classes and events</h3><p>Open Q&amp;A sessions and a taster week will be announced on our channels. Join to hear the dates first.</p><div class="btns" style="margin-top:8px"><a class="btn dk" href="https://chat.whatsapp.com/C3zYRnRr43c8jEqpEFuWsD" rel="noopener">WhatsApp group</a><a class="btn dk" href="https://t.me/+3BjSnCNClh1kNGI0" rel="noopener">Telegram</a></div></div>
+<div class="card"><h3>Become an ambassador</h3><p>Share MHII College with your mosque, school or community group. Message The Admin Office to get started.</p><a class="btn dk" href="https://wa.me/2349032382891?text=Assalamu%20alaikum.%20I%20would%20like%20to%20become%20an%20MHII%20College%20ambassador." rel="noopener">Message The Admin Office</a></div>
+<div class="card"><h3>Share your story</h3><p>Have you studied with us? With your permission, we would like to hear how the Diploma helped you.</p><a class="btn dk" href="https://wa.me/2349032382891?text=Assalamu%20alaikum.%20I%20would%20like%20to%20share%20my%20MHII%20College%20story." rel="noopener">Send your story</a></div>
+<a class="card tile" href="MHII-Poster.pdf"><b>Poster for mosques and schools</b><span>Print it with the QR code (PDF)</span></a>
+</div></div></section>
 
 <section id="policies" class="pg"><h2 data-ar="السياسات">Policies</h2>
 <p class="lead">Plain-language rules for applicants and students. Last updated October 2026.</p>
@@ -608,14 +637,37 @@ $("sh-wa").href="https://wa.me/?text="+encodeURIComponent(SM);
 $("sh-tg").href="https://t.me/share/url?url="+encodeURIComponent(SU)+"&text="+encodeURIComponent(SM.replace(" Learn more and apply: "+SU,""));
 $("sh-cp").onclick=function(){try{navigator.clipboard.writeText(SM).then(function(){$("sh-m").textContent="Invitation copied. Paste it anywhere."},function(){$("sh-m").textContent="Could not copy. Use the WhatsApp or Telegram button."})}catch(e){$("sh-m").textContent="Could not copy. Use the WhatsApp or Telegram button."}};
 if(navigator.share){$("sh-nt").style.display="inline-block";$("sh-nt").onclick=function(){navigator.share({title:"MHII College",text:SM,url:SU}).catch(function(){})}}
+var WDS=["كِتَاب|kitāb|book", "قَلَم|qalam|pen", "عِلْم|ʿilm|knowledge", "سَلَام|salām|peace", "صَبْر|ṣabr|patience", "شُكْر|shukr|gratitude", "بَيْت|bayt|house", "مَدْرَسَة|madrasah|school", "مُعَلِّم|muʿallim|teacher", "طَالِب|ṭālib|student", "صَلَاة|ṣalāh|prayer", "مَاء|māʾ|water", "نُور|nūr|light", "طَرِيق|ṭarīq|road, path", "صَدِيق|ṣadīq|friend", "عَمَل|ʿamal|work, deed", "حَيَاة|ḥayāh|life", "قَلْب|qalb|heart", "يَوْم|yawm|day", "لَيْل|layl|night", "شَمْس|shams|sun", "قَمَر|qamar|moon", "سَمَاء|samāʾ|sky", "أَرْض|arḍ|earth", "طَعَام|ṭaʿām|food", "عَقْل|ʿaql|mind", "صِدْق|ṣidq|truthfulness", "أَمَانَة|amānah|trust", "رَحْمَة|raḥmah|mercy", "عَدْل|ʿadl|justice"],RMS=["Actions are judged by their intentions.|Sahih al-Bukhari and Sahih Muslim", "The best of you are those who learn the Qur’an and teach it.|Sahih al-Bukhari", "Whoever follows a path seeking knowledge, Allah makes easy for him a path to Paradise.|Sahih Muslim", "None of you truly believes until he loves for his brother what he loves for himself.|Sahih al-Bukhari and Sahih Muslim", "The strong person is the one who controls himself when angry.|Sahih al-Bukhari and Sahih Muslim", "Whoever believes in Allah and the Last Day should speak good or stay silent.|Sahih al-Bukhari and Sahih Muslim", "Make things easy and do not make them hard.|Sahih al-Bukhari and Sahih Muslim", "The most beloved deeds to Allah are the most consistent, even if small.|Sahih al-Bukhari and Sahih Muslim", "Smiling at your brother is charity.|Jami‘ al-Tirmidhi", "Religion is sincere advice.|Sahih Muslim", "Allah looks at your hearts and your deeds.|Sahih Muslim", "The believers are like one building, each part strengthening the other.|Sahih al-Bukhari and Sahih Muslim", "Remember Me, and I will remember you.|Qur’an 2:152 (meaning)", "With hardship comes ease.|Qur’an 94:5–6 (meaning)", "My Lord, increase me in knowledge.|Qur’an 20:114 (meaning)", "Are those who know equal to those who do not know?|Qur’an 39:9 (meaning)", "Allah does not burden a soul beyond what it can bear.|Qur’an 2:286 (meaning)"];
+function doy(){var n=new Date(),a=new Date(n.getFullYear(),0,0);return Math.floor((n-a)/864e5)}
+(function(){var w=WDS[doy()%WDS.length].split("|"),r=RMS[doy()%RMS.length].split("|");
+$("wd-ar").textContent=w[0];$("wd-tr").textContent=w[1];$("wd-en").textContent=w[2];
+$("dr-t").textContent="“"+r[0]+"”";$("dr-s").textContent=r[1];
+$("wd-sh").href="https://wa.me/?text="+encodeURIComponent("Arabic word of the day: "+w[0]+" ("+w[1]+") means "+w[2]+". Learn more at MHII College: https://mhiicollege.github.io/mhii-college/");
+$("dr-sh").href="https://wa.me/?text="+encodeURIComponent("“"+r[0]+"” ("+r[1]+")\nFrom MHII College: https://mhiicollege.github.io/mhii-college/")})();
+var FQ={"Understand and recite the Qur’an":["Tafsir and Qur’anic sciences|Qur’anic Studies","Recitation and Tajwid|Tajwid and Qira’at"],
+"Learn the Prophet’s teachings and history":["Hadith and how it is studied|Hadith and Sunnah","The life of the Prophet ﷺ and Islamic history|Seerah and Islamic History"],
+"Understand Islamic law and rulings":["A broad foundation in Sharia|Sharia and Islamic Law","Fiqh and the principles behind rulings|Fiqh and Usul al-Fiqh"],
+"Learn Islam broadly or share it with others":["A broad foundation in Islamic studies|Islamic Studies","Calling to Islam and Islamic media|Da’wah and Islamic Communication"],
+"Learn the Arabic language":["Arabic is my first language|Arabic Language","Arabic is not my first language|Arabic for Non-Native Speakers"],
+"Become a teacher":["I want to teach Arabic|Arabic Education","I want to teach Islamic subjects|Islamic Education"]};
+function fqBtn(t,fn){var b=document.createElement("button");b.type="button";b.className="btn alt";b.style.cssText="display:block;width:100%;text-align:left;margin:8px 0;color:var(--ink);border:1px solid var(--line);background:var(--card);cursor:pointer";b.textContent=t;b.onclick=fn;return b}
+function fq1(){var f=$("fq");f.innerHTML="<h3>1. What do you most want to do?</h3>";Object.keys(FQ).forEach(function(k){f.appendChild(fqBtn(k,function(){fq2(k)}))})}
+function fq2(k){var f=$("fq");f.innerHTML="<h3>2. Which fits you better?</h3>";FQ[k].forEach(function(o){var a=o.split("|");f.appendChild(fqBtn(a[0],function(){fq3(a[1])}))});f.appendChild(fqBtn("← Back",fq1))}
+function fq3(d){var f=$("fq"),c=CODE[d],lo=c[1]*100+1;f.innerHTML="<h3>We suggest</h3><p style='font:700 1.3rem Georgia,serif;color:var(--deep);margin:6px 0'>Diploma in "+d+"</p><p style='color:var(--mute)'>Course codes "+c[0]+" "+lo+"–"+(lo+27)+" · 12 months · 58 credit hours</p>";
+var b=document.createElement("div");b.className="btns";
+var a1=document.createElement("a");a1.className="btn dk";a1.href="#curriculum";a1.textContent="See the curriculum";a1.onclick=function(){cs.value=d;cs.onchange()};
+var a2=document.createElement("a");a2.className="btn dk";a2.href="#applyform";a2.textContent="Apply now";
+var a3=document.createElement("button");a3.type="button";a3.className="btn alt";a3.style.cssText="color:var(--deep);border-color:var(--deep);background:none;cursor:pointer";a3.textContent="Start again";a3.onclick=fq1;
+b.appendChild(a1);b.appendChild(a2);b.appendChild(a3);f.appendChild(b)}
+fq1();
 $("vb").onclick=function(){$("vr").textContent=$("vc").value.trim()?"Online verification will be switched on once the college database is connected. For now, email mhiicollege@gmail.com with the code.":"Enter the verification code first."};
 </script>
 <script>
 (function(){try{
 var $=function(i){return document.getElementById(i)};
-var PG={home:["home","stats","tiles","campus","welcome","share"],about:["about"],programmes:["academics","lesson"],admissions:["admissions","faq"],students:["students","research","library","news"],verify:["verify"],contact:["contact","policies"]};
-var CH={about:[["Who we are","about"],["At a glance","glance"],["Commitments","commit"],["Recognition","recog"],["Leadership","leader"]],programmes:[["Faculties","academics"],["Curriculum","curriculum"],["Grading","grading"],["Free lesson","lesson"]],admissions:[["Requirements and fees","admissions"],["Apply","applyform"],["FAQ","faq"]],students:[["Portals","students"],["Research","research"],["Library","library"],["News","news"]],contact:[["Contact","contact"],["Policies","policies"]]};
-var NV={home:"home",about:"about",programmes:"academics",admissions:"admissions",students:"students",verify:"verify",contact:"contact"};
+var PG={home:["home","stats","tiles","campus","welcome","share"],about:["about"],programmes:["academics"],learn:["learn","lesson","finder","downloads"],admissions:["admissions","faq"],students:["students","research","library","news","community"],verify:["verify"],contact:["contact","policies"]};
+var CH={about:[["Who we are","about"],["At a glance","glance"],["Commitments","commit"],["Recognition","recog"],["Leadership","leader"]],programmes:[["Faculties","academics"],["Curriculum","curriculum"],["Grading","grading"]],admissions:[["Requirements and fees","admissions"],["Apply","applyform"],["FAQ","faq"]],learn:[["Daily","learn"],["Free lessons","lesson"],["Which Diploma?","finder"],["Downloads","downloads"]],students:[["Portals","students"],["Research","research"],["Library","library"],["News","news"],["Community","community"]],contact:[["Contact","contact"],["Policies","policies"]]};
+var NV={home:"home",about:"about",programmes:"academics",learn:"learn",admissions:"admissions",students:"students",verify:"verify",contact:"contact"};
 var where={};Object.keys(PG).forEach(function(p){PG[p].forEach(function(i){where[i]=p})});
 var page=null;
 function setPage(p){if(p==page)return;page=p;
