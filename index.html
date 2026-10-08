@@ -6,6 +6,19 @@
 <meta name="description" content="MHII College offers 12-month online Diploma programmes in Qur’anic Studies, Hadith, Sharia, Arabic, Islamic Studies and Education, taught through WhatsApp and Telegram.">
 <script>document.documentElement.classList.add("js")</script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<link rel="canonical" href="https://mhiicollege.github.io/mhii-college/">
+<meta name="theme-color" content="#0b2a5b">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MHII College">
+<meta property="og:title" content="MHII College – Online Islamic Diploma Programmes">
+<meta property="og:description" content="12-month online Diploma programmes in Qur’anic Studies, Hadith, Sharia, Arabic and Education. Study on WhatsApp and Telegram. Applications open 1–31 December 2026.">
+<meta property="og:url" content="https://mhiicollege.github.io/mhii-college/">
+<meta property="og:image" content="https://mhiicollege.github.io/mhii-college/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="MHII College – Online Islamic Diploma Programmes">
+<meta name="twitter:image" content="https://mhiicollege.github.io/mhii-college/og-image.png">
 <title>MHII College – Manaratul Huda International Islamic College</title>
 <style>
 :root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
@@ -164,6 +177,11 @@ footer a{color:#f0d48a}
 <p>We invite you to study with us and become a source of benefit to your community. May Allah accept our work and guide us all.</p>
 <p style="margin-bottom:0"><strong>The Principal</strong><br>MHII College</p>
 </div></section>
+
+<section class="pg" id="share" style="padding-bottom:0"><h2>Share MHII College</h2>
+<p class="lead">Know someone who wants to study Islamic knowledge? Send them the link.</p>
+<div class="card"><div class="btns" style="margin-top:0"><a class="btn dk" id="sh-wa" href="#" rel="noopener">Share on WhatsApp</a><a class="btn dk" id="sh-tg" href="#" rel="noopener">Share on Telegram</a><button type="button" class="btn alt" id="sh-cp" style="color:var(--deep);border-color:var(--deep);background:none;cursor:pointer">Copy invitation</button><button type="button" class="btn alt" id="sh-nt" style="display:none;color:var(--deep);border-color:var(--deep);background:none;cursor:pointer">More options</button></div>
+<p id="sh-m" role="status" style="font:.9rem system-ui,sans-serif;color:var(--mute);margin:10px 0 0;min-height:1.2em"></p></div></section>
 
 <section id="about" class="pg"><h2 data-ar="عن كلية MHII">About MHII College</h2>
 <p class="lead" data-ar="كلية منارة الهدى العالمية الإسلامية (كلية MHII) مؤسسة إسلامية عبر الإنترنت تقدّم برامج دبلوم منظّمة مدتها 12 شهرًا في ست كليات. هدفنا إتاحة العلم الشرعي الرصين للطلاب في كل مكان، وفق معايير واضحة وحسن خلق.">Manaratul Huda International Islamic College (MHII College) is an online Islamic institution offering structured 12-month Diploma programmes in six faculties. Our purpose is to make sound Islamic knowledge available to students everywhere, taught with clear standards and good character.</p>
@@ -580,12 +598,18 @@ if(r.error){gerr("Wrong email or password.");return}
 $("sp").value="";enter(r.data.user)},function(){$("sb").disabled=false;gerr("Could not reach the account service. Check your internet and try again.")})};
 $("so").onclick=function(){var done=function(){cu=null;rowId=null;FLD.forEach(function(i){var e=$(i);if(e.type=="checkbox")e.checked=false;else e.value=""});["d1","d2","d3"].forEach(function(i){$(i).checked=false});$("wz").style.display="none";$("wr").style.display="none";$("gw").style.display="block";$("gm").textContent="";show(1)};if(SB)SB.auth.signOut().then(done,done);else done()};
 if(SB){SB.auth.getSession().then(function(r){if(r.data&&r.data.session)enter(r.data.session.user)},function(){})}
+var SU="https://mhiicollege.github.io/mhii-college/";
+var SM="Assalamu alaikum. MHII College offers 12-month online Islamic Diploma programmes (Qur’anic Studies, Hadith, Sharia, Arabic and Education), taught on WhatsApp and Telegram. Applications open 1–31 December 2026. Learn more and apply: "+SU;
+$("sh-wa").href="https://wa.me/?text="+encodeURIComponent(SM);
+$("sh-tg").href="https://t.me/share/url?url="+encodeURIComponent(SU)+"&text="+encodeURIComponent(SM.replace(" Learn more and apply: "+SU,""));
+$("sh-cp").onclick=function(){try{navigator.clipboard.writeText(SM).then(function(){$("sh-m").textContent="Invitation copied. Paste it anywhere."},function(){$("sh-m").textContent="Could not copy. Use the WhatsApp or Telegram button."})}catch(e){$("sh-m").textContent="Could not copy. Use the WhatsApp or Telegram button."}};
+if(navigator.share){$("sh-nt").style.display="inline-block";$("sh-nt").onclick=function(){navigator.share({title:"MHII College",text:SM,url:SU}).catch(function(){})}}
 $("vb").onclick=function(){$("vr").textContent=$("vc").value.trim()?"Online verification will be switched on once the college database is connected. For now, email mhiicollege@gmail.com with the code.":"Enter the verification code first."};
 </script>
 <script>
 (function(){try{
 var $=function(i){return document.getElementById(i)};
-var PG={home:["home","stats","tiles","campus","welcome"],about:["about"],programmes:["academics","lesson"],admissions:["admissions","faq"],students:["students","research","library","news"],verify:["verify"],contact:["contact","policies"]};
+var PG={home:["home","stats","tiles","campus","welcome","share"],about:["about"],programmes:["academics","lesson"],admissions:["admissions","faq"],students:["students","research","library","news"],verify:["verify"],contact:["contact","policies"]};
 var CH={about:[["Who we are","about"],["At a glance","glance"],["Commitments","commit"],["Recognition","recog"],["Leadership","leader"]],programmes:[["Faculties","academics"],["Curriculum","curriculum"],["Grading","grading"],["Free lesson","lesson"]],admissions:[["Requirements and fees","admissions"],["Apply","applyform"],["FAQ","faq"]],students:[["Portals","students"],["Research","research"],["Library","library"],["News","news"]],contact:[["Contact","contact"],["Policies","policies"]]};
 var NV={home:"home",about:"about",programmes:"academics",admissions:"admissions",students:"students",verify:"verify",contact:"contact"};
 var where={};Object.keys(PG).forEach(function(p){PG[p].forEach(function(i){where[i]=p})});
